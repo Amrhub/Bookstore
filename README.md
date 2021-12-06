@@ -1,45 +1,46 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Bookstore: setup
 
-> One paragraph statement about the project.
+> Bookstore: initialize project with components
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+Book store is a simple application that allows you to create a bookstore.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML5 - CSS3 - JavaScript
+- React - Redux
 
-## Live Demo
+<!-- ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo Link](https://livedemo.com) -->
 
 ## Getting Started
 
 **This is an example of how you may give instructions on setting up your project locally.**
 **Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- [Install Node.js](https://nodejs.org/en/)
+- [Install NPM](https://www.npmjs.com/get-npm)
+
 ### Setup
+
+- Clone the repository to your local machine. For example: `git clone https://github.com/Amrhub/Bookstore.git`
+- Change directory to the root of the repository. For example: `cd Bookstore`
 
 ### Install
 
+- Run `npm install` to install all dependencies.
+
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
+- Run `npm start` to start the application.
 
 ## Authors
 
@@ -47,7 +48,6 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@Amrhub](https://github.com/Amrhub/)
 - LinkedIn: [Amr Ahmed](https://www.linkedin.com/in/amr-ahmed-655420191/)
-
 
 ## 🤝 Contributing
 
