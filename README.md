@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore: setup
+# Bookstore
 
-> Bookstore: initialize project with components
+> Bookstore: create and remove books
 
 ![screenshot](./app_screenshot.png)
 
@@ -19,9 +19,6 @@ Book store is a simple application that allows you to create a bookstore.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -31,7 +28,10 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Clone the repository to your local machine. For example: `git clone https://github.com/Amrhub/Bookstore.git`
+- Clone the repository to your local machine. For example: <br>
+  `git clone https://github.com/Amrhub/Bookstore.git` using `HTTPS` protocol. <br>
+  `git clone git@github.com:Amrhub/Bookstore.git` using `SSH` protocol.
+
 - Change directory to the root of the repository. For example: `cd Bookstore`
 
 ### Install
