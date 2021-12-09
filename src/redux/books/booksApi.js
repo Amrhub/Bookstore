@@ -16,4 +16,15 @@ export default class BooksApi {
     });
     return books;
   };
+
+  static postBook = async (book) => {
+    await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
+      body: JSON.stringify(book),
+    });
+  };
 }

@@ -7,7 +7,7 @@ const FETCH_BOOKS_SUCCEEDED = 'bookStore/books/FETCH_BOOKS_SUCCEEDED';
 const FETCH_BOOKS_FAILED = 'bookStore/books/FETCH_BOOKS_FAILED';
 
 const initialState = [];
-const { getAllBooks } = BooksApi;
+const { getAllBooks, postBook } = BooksApi;
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
@@ -19,6 +19,19 @@ export const removeBook = (payload) => ({
   payload,
 });
 
+const fetchBookFailed = () => ({
+  type: FETCH_BOOKS_FAILED,
+});
+
+export const addBookApi = (book) => async (dispatch) => {
+  try {
+    await postBook(book);
+    dispatch(addBook(book));
+  } catch {
+    dispatch(fetchBookFailed());
+  }
+};
+
 export const fetchBooks = () => async (dispatch) => {
   try {
     const books = await getAllBooks();
@@ -27,9 +40,7 @@ export const fetchBooks = () => async (dispatch) => {
       payload: books,
     });
   } catch (e) {
-    dispatch({
-      type: FETCH_BOOKS_FAILED,
-    });
+    dispatch(fetchBookFailed());
   }
 };
 
