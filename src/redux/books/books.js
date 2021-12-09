@@ -19,18 +19,31 @@ export const removeBook = (payload) => ({
   payload,
 });
 
+const middleWare = () => (dispatch) => {
+  console.log('Hello');
+  dispatch({
+    type: ADD_BOOK,
+    payload: { id: 1, title: 'book1', author: 'Here' },
+  });
+};
+middleWare();
 export const fetchBooks = async () => {
   try {
+    console.log('Fetching...');
     const books = await getAllBooks();
-    console.log(books);
+    console.log('RESULTS', books);
     return (dispatch) => {
-      dispatch({
-        type: FETCH_BOOKS_SUCCEEDED,
-        payload: books,
+      console.log('FETCH_BOOKS_SUCCEEDED');
+      _.forEach(books, (book) => {
+        dispatch({
+          type: FETCH_BOOKS_SUCCEEDED,
+          payload: book,
+        });
       });
     };
   } catch {
     return (dispatch) => {
+      console.log('FETCH_BOOKS_FAILED');
       dispatch({
         type: FETCH_BOOKS_FAILED,
       });
@@ -41,14 +54,17 @@ export const fetchBooks = async () => {
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_BOOK:
+      console.log('ADD_BOOK');
       return [...state, payload];
     case REMOVE_BOOK: {
       const newState = _.filter(state, (book) => book.id !== payload.id);
       return newState;
     }
     case FETCH_BOOKS_SUCCEEDED:
+      console.log('FETCH_BOOKS_SUCCEEDED');
       return payload;
     case FETCH_BOOKS_FAILED:
+      console.log('FETCH_BOOKS_FAILED');
       return state;
     default:
       return state;
