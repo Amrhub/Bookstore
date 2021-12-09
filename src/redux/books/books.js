@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import _ from 'lodash';
 import BooksApi from './booksApi';
 
@@ -7,7 +8,7 @@ const FETCH_BOOKS_SUCCEEDED = 'bookStore/books/FETCH_BOOKS_SUCCEEDED';
 const FETCH_BOOKS_FAILED = 'bookStore/books/FETCH_BOOKS_FAILED';
 
 const initialState = [];
-const { getAllBooks, postBook } = BooksApi;
+const { getAllBooks, postBook, deleteBook } = BooksApi;
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
@@ -23,15 +24,6 @@ const fetchBookFailed = () => ({
   type: FETCH_BOOKS_FAILED,
 });
 
-export const addBookApi = (book) => async (dispatch) => {
-  try {
-    await postBook(book);
-    dispatch(addBook(book));
-  } catch {
-    dispatch(fetchBookFailed());
-  }
-};
-
 export const fetchBooks = () => async (dispatch) => {
   try {
     const books = await getAllBooks();
@@ -44,12 +36,30 @@ export const fetchBooks = () => async (dispatch) => {
   }
 };
 
+export const addBookApi = (book) => async (dispatch) => {
+  try {
+    await postBook(book);
+    dispatch(addBook(book));
+  } catch {
+    dispatch(fetchBookFailed());
+  }
+};
+
+export const removeBookApi = (bookId) => async (dispatch) => {
+  try {
+    deleteBook(bookId);
+    dispatch(removeBook(bookId));
+  } catch {
+    dispatch(fetchBookFailed());
+  }
+};
+
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_BOOK:
       return [...state, payload];
     case REMOVE_BOOK: {
-      const newState = _.filter(state, (book) => book.id !== payload.id);
+      const newState = _.filter(state, (book) => book.id !== payload);
       return newState;
     }
     case FETCH_BOOKS_SUCCEEDED:

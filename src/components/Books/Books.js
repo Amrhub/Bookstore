@@ -20,7 +20,11 @@ const Books = () => {
       <ul className="books-list">
         {books.length ? (
           books.map((book) => (
-            <li className="book" key={book.id || book.item_id}>
+            <li
+              className="book"
+              data-id={book.id || book.book_id}
+              key={book.id || book.item_id}
+            >
               <BookInfo title={book.title} category={book.category} />
               <BookButton />
             </li>

@@ -27,4 +27,10 @@ export default class BooksApi {
       body: JSON.stringify(book),
     });
   };
+
+  static deleteBook = async (id) => {
+    await fetch(`${API_URL}/${id}`, {
+      method: 'DELETE',
+    });
+  };
 }
