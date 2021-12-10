@@ -55,6 +55,10 @@ $border-color: #e8e8e8;
   }
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .btn-primary {
   background-color: #0290ff;
   text-transform: uppercase;
@@ -71,4 +75,22 @@ $border-color: #e8e8e8;
 
 .btn-submit {
   padding: 0.4rem 2rem;
+}
+
+.btn-book {
+  color: #4386bf;
+  font-size: 0.875rem;
+  border: none;
+  background-color: transparent;
+  padding-right: 0.8rem;
+  padding-left: 1rem;
+  border-right: solid 2px $border-color;
+
+  &:last-of-type {
+    border-right: none;
+  }
+
+  &:first-of-type {
+    padding-left: 0;
+  }
 }

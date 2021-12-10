@@ -49,7 +49,7 @@ const AddBook = () => {
           required
         />
 
-        <button type="submit" className="btn-primary btn-submit">
+        <button type="submit" className="btn btn-primary btn-submit">
           add book
         </button>
       </form>
