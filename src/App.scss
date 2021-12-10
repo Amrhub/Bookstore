@@ -20,6 +20,13 @@ h1 {
   font-family: $secondary-font;
 }
 
+.faded-black {
+  font-family: $secondary-font;
+  font-size: 0.875rem;
+  opacity: 0.5;
+  color: #121212;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
