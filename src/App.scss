@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Slab:wght@300&display=swap');
+
+$primary-font: 'Roboto Slab', serif;
+$secondary-font: 'Montserrat', sans-serif;
+
 *,
 *::before,
 ::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-family: $primary-font;
+  background-color: #fafafa;
+}
+
+h1 {
+  font-family: $secondary-font;
 }
 
 .sr-only {

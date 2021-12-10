@@ -1,0 +1,74 @@
+$max-form-width: 1200px;
+$border-color: #e8e8e8;
+
+.form-heading {
+  margin-block: 1rem;
+  padding-top: 1rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: -0.18px;
+  color: #888;
+  line-height: normal;
+  border-top: 1px solid $border-color;
+}
+
+.book-form {
+  display: flex;
+  gap: 2.125rem;
+
+  width: 100%;
+  max-width: $max-form-width;
+
+  .form-control {
+    padding-block: 0.613rem;
+    padding-left: 1.016rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    border: solid 1px $border-color;
+    border-radius: 5px;
+
+    &::placeholder {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+  }
+
+  [data-flexGrow='1'] {
+    flex-grow: 1;
+  }
+
+  [data-flexGrow='2'] {
+    flex-grow: 2;
+  }
+
+  & > * {
+    transition: transform 0.3s ease-in-out;
+
+    &:focus-within {
+      outline: #00a8ff auto 10px;
+    }
+
+    &:hover {
+      transform: scale(1.025);
+    }
+  }
+}
+
+.btn-primary {
+  background-color: #0290ff;
+  text-transform: uppercase;
+  font-size: 0.813rem;
+  color: #fff;
+  border: none;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+
+  &:focus-within {
+    outline: #012853 auto 10px !important;
+  }
+}
+
+.btn-submit {
+  padding: 0.4rem 2rem;
+}
