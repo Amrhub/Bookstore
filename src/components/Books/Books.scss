@@ -1,5 +1,24 @@
-$max-form-width: 1200px;
+$max-form-width: 100%;
 $border-color: #e8e8e8;
+$secondary-font: 'Montserrat', sans-serif;
+
+.books-container {
+  padding: 2rem 6rem;
+}
+
+.books-list {
+  list-style: none;
+
+  .book {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border: 2px solid $border-color;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem 9rem 2rem 2rem;
+    width: 100%;
+  }
+}
 
 .form-heading {
   margin-block: 1rem;
@@ -22,13 +41,13 @@ $border-color: #e8e8e8;
   .form-control {
     padding-block: 0.613rem;
     padding-left: 1.016rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $secondary-font;
     font-size: 1rem;
     border: solid 1px $border-color;
     border-radius: 5px;
 
     &::placeholder {
-      font-family: 'Montserrat', sans-serif;
+      font-family: $secondary-font;
       font-size: 1rem;
       text-transform: capitalize;
     }
@@ -60,7 +79,7 @@ $border-color: #e8e8e8;
 }
 
 .btn-primary {
-  background-color: #0290ff;
+  background-color: rgb(2, 145, 255);
   text-transform: uppercase;
   font-size: 0.813rem;
   color: #fff;
@@ -92,5 +111,64 @@ $border-color: #e8e8e8;
 
   &:first-of-type {
     padding-left: 0;
+  }
+}
+
+.progress-container {
+  display: flex;
+  margin-left: auto;
+
+  .progress-bar {
+    width: 100px;
+    aspect-ratio: 1;
+    transform: rotateY(180deg);
+  }
+
+  .progress-value {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem 5rem;
+    justify-content: center;
+
+    strong {
+      display: block;
+      font-family: $secondary-font;
+      font-size: 2rem;
+      font-weight: normal;
+      color: #121212;
+    }
+
+    .completed {
+      color: #121212;
+      opacity: 0.5;
+      font-size: 0.875rem;
+      text-transform: capitalize;
+    }
+  }
+
+  .progress-update {
+    border-left: solid 2px $border-color;
+    padding-left: 4rem;
+
+    h4,
+    p {
+      color: #121212;
+    }
+
+    h4 {
+      opacity: 0.5;
+      font-size: 0.813rem;
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      font-size: 1rem;
+      letter-spacing: -0.4px;
+      margin-bottom: 1.4rem;
+    }
+
+    .btn {
+      padding-block: 0.6rem;
+    }
   }
 }
