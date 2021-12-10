@@ -3,21 +3,21 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
-import { addBook } from '../../redux/books/books';
+import { addBookApi } from '../../redux/books/books';
 
 const AddBook = () => {
   const dispatch = useDispatch();
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title: e.target.title.value,
-      author: e.target.author.value,
+      category: e.target.category.value,
     };
 
-    dispatch(addBook(newBook));
+    dispatch(addBookApi(newBook));
     e.target.title.value = '';
-    e.target.author.value = '';
+    e.target.category.value = '';
   };
   return (
     <form className="book-form" onSubmit={submitBookToStore}>
@@ -30,25 +30,20 @@ const AddBook = () => {
         id="book-title"
         placeholder="Title"
         name="title"
+        required
       />
-      <label htmlFor="book-author" className="sr-only">
-        Author
+      <label htmlFor="book-category" className="sr-only">
+        category
       </label>
       <input
         type="text"
         className="form-control"
-        id="book-author"
-        placeholder="Author"
-        name="author"
+        id="book-category"
+        placeholder="category"
+        name="category"
+        required
       />
-      <label htmlFor="book-category" className="sr-only">
-        Category
-      </label>
-      <select className="form-control sr-only" id="book-category">
-        <option>Category</option>
-        <option>Category 1</option>
-        <option>Category 2</option>
-      </select>
+
       <button type="submit" className="btn-primary btn-submit">
         add book
       </button>

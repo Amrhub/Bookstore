@@ -1,19 +1,16 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import _ from 'lodash';
+import { useDispatch } from 'react-redux';
 
-import { removeBook } from '../../redux/books/books';
+import { removeBookApi } from '../../redux/books/books';
 
 const BookButton = () => {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books);
 
   const removeBookFromStore = (e) => {
     const listItem = e.target.parentNode.parentNode;
     const bookId = listItem.getAttribute('data-id');
-    const book = _.find(books, { id: bookId });
 
-    dispatch(removeBook(book));
+    dispatch(removeBookApi(bookId));
   };
 
   return (
