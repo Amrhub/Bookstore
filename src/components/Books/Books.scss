@@ -34,7 +34,6 @@ $secondary-font: 'Montserrat', sans-serif;
 .book-form {
   display: flex;
   gap: 2.125rem;
-
   width: 100%;
   max-width: $max-form-width;
 
@@ -120,7 +119,7 @@ $secondary-font: 'Montserrat', sans-serif;
 
   .progress-bar {
     width: 100px;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     transform: rotateY(180deg);
   }
 
