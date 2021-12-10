@@ -2,20 +2,21 @@
 
 # Bookstore
 
-> Bookstore: create and remove books
+> store your books and save your progress in one place
 
 ![screenshot](./app_screenshot.png)
 
-Book store is a simple application that allows you to create a bookstore.
+Book store allows you to save your progress work on reading your favorite books, you could also have a list of books at once :)
 
 ## Built With
 
 - HTML5 - CSS3 - JavaScript
 - React - Redux
+- [BookStore Api](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739)
 
-<!-- ## Live Demo
+## Live Demo
 
-[Live Demo Link](https://livedemo.com) -->
+[Live Demo Link](https://bookstore-react-app.netlify.app/)
 
 ## Getting Started
 

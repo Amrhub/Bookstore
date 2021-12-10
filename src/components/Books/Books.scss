@@ -1,0 +1,188 @@
+$max-form-width: 100%;
+$border-color: #e8e8e8;
+$secondary-font: 'Montserrat', sans-serif;
+
+.container {
+  padding: 2rem 8rem;
+}
+
+.books-list {
+  list-style: none;
+
+  .book {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border: 2px solid $border-color;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem 9rem 2rem 2rem;
+    width: 100%;
+  }
+}
+
+.form-heading {
+  margin-block: 1rem;
+  padding-top: 1rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: -0.18px;
+  color: #696969;
+  line-height: normal;
+  border-top: 1px solid $border-color;
+}
+
+.book-form {
+  display: flex;
+  gap: 2.125rem;
+  width: 100%;
+  max-width: $max-form-width;
+
+  .form-control {
+    padding-block: 0.613rem;
+    padding-left: 1.016rem;
+    font-family: $secondary-font;
+    font-size: 1rem;
+    border: solid 1px $border-color;
+    border-radius: 5px;
+
+    &::placeholder {
+      font-family: $secondary-font;
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+  }
+
+  [data-flexGrow='1'] {
+    flex-grow: 1;
+  }
+
+  [data-flexGrow='2'] {
+    flex-grow: 2;
+  }
+
+  & > * {
+    transition: transform 0.3s ease-in-out;
+
+    &:focus-within {
+      outline: #00a8ff auto 10px;
+    }
+
+    &:hover {
+      transform: scale(1.025);
+    }
+  }
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: rgb(2, 145, 255);
+  text-transform: uppercase;
+  font-size: 0.813rem;
+  color: #040000;
+  border: none;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+
+  &:focus-within {
+    outline: #012853 auto 10px !important;
+  }
+}
+
+.btn-submit {
+  padding: 0.4rem 2rem;
+}
+
+.btn-book {
+  color: #02559b;
+  font-size: 0.875rem;
+  border: none;
+  background-color: transparent;
+  padding-right: 0.8rem;
+  padding-left: 1rem;
+  border-right: solid 2px $border-color;
+
+  &:last-of-type {
+    border-right: none;
+  }
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+}
+
+.progress-container {
+  display: flex;
+  margin-left: auto;
+
+  .progress-bar {
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    transform: rotateY(180deg);
+  }
+
+  .progress-value {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem 5rem;
+    justify-content: center;
+
+    strong {
+      display: block;
+      font-family: $secondary-font;
+      font-size: 2rem;
+      font-weight: normal;
+      color: #121212;
+    }
+
+    .completed {
+      text-transform: capitalize;
+    }
+  }
+
+  .progress-update {
+    border-left: solid 2px $border-color;
+    padding-left: 4rem;
+
+    h4 {
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #121212;
+      font-size: 1rem;
+      letter-spacing: -0.4px;
+      margin-bottom: 1.4rem;
+    }
+
+    .btn {
+      padding-block: 0.6rem;
+    }
+  }
+}
+
+.book-info {
+  margin-bottom: 1.5rem;
+
+  .book-category {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .book-title {
+    font-size: 1.375rem;
+    letter-spacing: -0.2px;
+    color: #121212;
+    text-transform: capitalize;
+  }
+
+  .book-author {
+    font-size: 0.875rem;
+    text-transform: capitalize;
+    color: #02559b;
+  }
+}

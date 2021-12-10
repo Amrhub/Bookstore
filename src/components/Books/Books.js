@@ -5,6 +5,7 @@ import { fetchBooks } from '../../redux/books/books';
 import AddBook from './AddBook';
 import BookButton from './BookButton';
 import BookInfo from './BookInfo';
+import BookProgress from './BookProgress';
 
 const Books = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Books = () => {
 
   const books = useSelector((state) => state.books);
   return (
-    <main className="books-container">
+    <main className="container">
       <h1 className="sr-only">Books</h1>
       <ul className="books-list">
         {books.length ? (
@@ -25,8 +26,11 @@ const Books = () => {
               data-id={book.id || book.book_id}
               key={book.id || book.item_id}
             >
-              <BookInfo title={book.title} category={book.category} />
-              <BookButton />
+              <div>
+                <BookInfo title={book.title} category={book.category} />
+                <BookButton />
+              </div>
+              <BookProgress />
             </li>
           ))
         ) : (

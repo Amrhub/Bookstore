@@ -7,7 +7,7 @@ const BookButton = () => {
   const dispatch = useDispatch();
 
   const removeBookFromStore = (e) => {
-    const listItem = e.target.parentNode.parentNode;
+    const listItem = e.target.parentNode.parentNode.parentNode;
     const bookId = listItem.getAttribute('data-id');
 
     dispatch(removeBookApi(bookId));
@@ -15,13 +15,17 @@ const BookButton = () => {
 
   return (
     <div className="book-functionality">
-      <button type="button" className="btn">
+      <button type="button" className="btn btn-book">
         Comments
       </button>
-      <button type="button" className="btn" onClick={removeBookFromStore}>
+      <button
+        type="button"
+        className="btn btn-book"
+        onClick={removeBookFromStore}
+      >
         Remove
       </button>
-      <button type="button" className="btn">
+      <button type="button" className="btn btn-book">
         Edit
       </button>
     </div>
