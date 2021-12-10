@@ -16,7 +16,7 @@ const Books = () => {
 
   const books = useSelector((state) => state.books);
   return (
-    <main className="books-container">
+    <main className="container">
       <h1 className="sr-only">Books</h1>
       <ul className="books-list">
         {books.length ? (

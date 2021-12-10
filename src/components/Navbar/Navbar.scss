@@ -1,0 +1,46 @@
+$secondary-font: 'Montserrat', sans-serif;
+
+.navbar {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  gap: 3rem;
+  padding-block: 1.813rem;
+  padding-inline-start: 8rem;
+  border-bottom: 2px solid #e8e8e8;
+
+  & > * {
+    font-family: $secondary-font;
+    text-decoration: none;
+  }
+  .brand {
+    font-weight: bold;
+    font-stretch: normal;
+    color: #0290ff;
+    font-size: 2rem;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    .nav-item {
+      margin: auto 0;
+
+      .nav-link {
+        letter-spacing: 1.9px;
+        color: #4f5051;
+        font-size: 0.813rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-right: 3rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+.active {
+  color: #000 !important;
+}
