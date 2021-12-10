@@ -26,7 +26,7 @@ $secondary-font: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: -0.18px;
-  color: #888;
+  color: #696969;
   line-height: normal;
   border-top: 1px solid $border-color;
 }
@@ -82,7 +82,7 @@ $secondary-font: 'Montserrat', sans-serif;
   background-color: rgb(2, 145, 255);
   text-transform: uppercase;
   font-size: 0.813rem;
-  color: #fff;
+  color: #040000;
   border: none;
   letter-spacing: 0.5px;
   border-radius: 5px;
@@ -97,7 +97,7 @@ $secondary-font: 'Montserrat', sans-serif;
 }
 
 .btn-book {
-  color: #4386bf;
+  color: #02559b;
   font-size: 0.875rem;
   border: none;
   background-color: transparent;
@@ -184,6 +184,6 @@ $secondary-font: 'Montserrat', sans-serif;
   .book-author {
     font-size: 0.875rem;
     text-transform: capitalize;
-    color: #4386bf;
+    color: #02559b;
   }
 }
