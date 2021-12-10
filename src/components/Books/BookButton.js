@@ -7,7 +7,7 @@ const BookButton = () => {
   const dispatch = useDispatch();
 
   const removeBookFromStore = (e) => {
-    const listItem = e.target.parentNode.parentNode;
+    const listItem = e.target.parentNode.parentNode.parentNode;
     const bookId = listItem.getAttribute('data-id');
 
     dispatch(removeBookApi(bookId));

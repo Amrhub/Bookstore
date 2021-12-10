@@ -139,9 +139,6 @@ $secondary-font: 'Montserrat', sans-serif;
     }
 
     .completed {
-      color: #121212;
-      opacity: 0.5;
-      font-size: 0.875rem;
       text-transform: capitalize;
     }
   }
@@ -150,18 +147,13 @@ $secondary-font: 'Montserrat', sans-serif;
     border-left: solid 2px $border-color;
     padding-left: 4rem;
 
-    h4,
+    h4 {
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+
     p {
       color: #121212;
-    }
-
-    h4 {
-      opacity: 0.5;
-      font-size: 0.813rem;
-      margin-bottom: 0.4rem;
-    }
-
-    p {
       font-size: 1rem;
       letter-spacing: -0.4px;
       margin-bottom: 1.4rem;
@@ -170,5 +162,28 @@ $secondary-font: 'Montserrat', sans-serif;
     .btn {
       padding-block: 0.6rem;
     }
+  }
+}
+
+.book-info {
+  margin-bottom: 1.5rem;
+
+  .book-category {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .book-title {
+    font-size: 1.375rem;
+    letter-spacing: -0.2px;
+    color: #121212;
+    text-transform: capitalize;
+  }
+
+  .book-author {
+    font-size: 0.875rem;
+    text-transform: capitalize;
+    color: #4386bf;
   }
 }

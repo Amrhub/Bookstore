@@ -16,12 +16,14 @@ const BookProgress = () => (
         })}
       />
     </div>
+
     <div className="progress-value">
       <strong>75%</strong>
-      <span className="completed">completed</span>
+      <span className="faded-black completed">completed</span>
     </div>
+
     <div className="progress-update">
-      <h4>Current Chapter</h4>
+      <h4 className="faded-black">Current Chapter</h4>
       <p>Chapter 17</p>
       <button type="button" className="btn btn-primary btn-submit">
         Update Progress
