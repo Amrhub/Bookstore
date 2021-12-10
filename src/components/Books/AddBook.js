@@ -30,6 +30,7 @@ const AddBook = () => {
         id="book-title"
         placeholder="Title"
         name="title"
+        required
       />
       <label htmlFor="book-category" className="sr-only">
         category
@@ -40,6 +41,7 @@ const AddBook = () => {
         id="book-category"
         placeholder="category"
         name="category"
+        required
       />
 
       <button type="submit" className="btn-primary btn-submit">
