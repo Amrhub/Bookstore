@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import _ from 'lodash';
 import BooksApi from './booksApi';
 
@@ -56,8 +55,10 @@ export const removeBookApi = (bookId) => async (dispatch) => {
 
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case ADD_BOOK:
-      return [...state, payload];
+    case ADD_BOOK: {
+      const newPayload = { id: payload.item_id, ...payload };
+      return [...state, newPayload];
+    }
     case REMOVE_BOOK: {
       const newState = _.filter(state, (book) => book.id !== payload);
       return newState;
